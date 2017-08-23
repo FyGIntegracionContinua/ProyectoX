@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>mx.com.findep.imagenes</groupId>
+    <artifactId>AdminImagenesWS</artifactId>
+    <version>1.0</version>
+  </parent>
+  <groupId>mx.com.findep.imagenes</groupId>
+  <artifactId>AdminImagenes</artifactId>
+  <version>1.0</version>
+  <packaging>war</packaging>
+  <name>AdminImagenes</name>
+  <url>http://maven.apache.org</url>
+  <properties>
+    <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir> 
+    <project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
+  </properties>
+    
+  <dependencies>
+  
+  <dependency>
+    <groupId>mx.com.findep.imagenes</groupId>
+  	<artifactId>AdminImagenesControlNegocio</artifactId>
+  	<version>1.0</version>
+	<type>jar</type>
+      <scope>provided</scope>
+  </dependency>
+
+  <dependency>
+    <groupId>mx.com.findep.imagenes</groupId>
+  	<artifactId>AdminImagenesDTO</artifactId>
+  	<version>1.0</version>
+	<type>jar</type>
+      <scope>provided</scope>
+  </dependency>
+  
+  <dependency>
+	<groupId>mx.com.findep.imagenes</groupId>
+	<artifactId>AdminImagenesDataServices</artifactId>
+	<version>1.0</version>
+	<type>jar</type>
+	  <scope>provided</scope>
+  </dependency>   
+  
+    <dependency>
+      <groupId>org.apache.cxf</groupId>
+      <artifactId>cxf-rt-frontend-jaxws</artifactId>
+      <version>2.5.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.cxf</groupId>
+      <artifactId>cxf-rt-transports-http</artifactId>
+      <version>2.5.0</version>
+    </dependency>
+  </dependencies>
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <configuration>
+            <source>1.5</source>
+            <target>1.5</target>
+          </configuration>
+        </plugin>
+        <plugin>
+          <artifactId>maven-eclipse-plugin</artifactId>
+          <configuration>
+            <projectNameTemplate>[artifactId]-[version]</projectNameTemplate>
+            <wtpmanifest>true</wtpmanifest>
+            <wtpapplicationxml>true</wtpapplicationxml>
+            <wtpversion>2.0</wtpversion>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+</project>

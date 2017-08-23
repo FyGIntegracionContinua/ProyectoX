@@ -1,0 +1,76 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+    <groupId>mx.com.findep.imagenes</groupId>
+    <artifactId>AdminImagenesWS</artifactId>
+    <version>1.0</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+  <artifactId>AdminImagenesEAR</artifactId>
+  <packaging>ear</packaging>
+    <name>AdminImagenesEAR</name>
+  <dependencies>
+    <dependency>
+    	<groupId>mx.com.findep.imagenes</groupId>
+      	<artifactId>AdminImagenes</artifactId>
+      	<version>1.0</version>
+      	<type>war</type>	  
+    </dependency>
+    <dependency>
+    <groupId>mx.com.findep.imagenes</groupId>
+      <artifactId>AdminImagenesControlNegocio</artifactId>
+      <version>1.0</version>
+    </dependency>
+    <dependency>
+    <groupId>mx.com.findep.imagenes</groupId>
+      <artifactId>AdminImagenesDataServices</artifactId>
+      <version>1.0</version>
+    </dependency>
+    <dependency>
+    <groupId>mx.com.findep.imagenes</groupId>
+      <artifactId>AdminImagenesDTO</artifactId>
+      <version>1.0</version>
+    </dependency>
+
+  </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-eclipse-plugin</artifactId>
+                <version>2.9</version>
+                <configuration>
+
+                    <projectNameTemplate>[artifactId]-[version]</projectNameTemplate>
+                    <wtpmanifest>true</wtpmanifest>
+                    <wtpapplicationxml>true</wtpapplicationxml>
+                    <wtpversion>2.0</wtpversion>
+                    <manifest>${basedir}/src/main/resources/META-INF/MANIFEST.MF</manifest>
+                    <additionalProjectFacets>
+                        <jst.ear>5.0</jst.ear>
+                        <wls.ear>10.3</wls.ear>
+                    </additionalProjectFacets>
+                    
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                <source>1.6</source>
+                <target>1.6</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-ear-plugin</artifactId>
+                <version>2.4.2</version>
+                <configuration>
+                    <version>5</version>
+                    <defaultLibBundleDir>lib</defaultLibBundleDir>
+                </configuration>
+            </plugin>
+        </plugins>
+  </build>
+</project>

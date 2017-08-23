@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="ImagenesFinsol">
+	<!-- 
+	Cambio del parametro cs_fc
+	<select id="obtenerUsuarioEmpleado" parameterType="EmpleadoDTO" resultType="EmpleadoPerfilDTO">
+		SELECT CASE WHEN isnull(cs_fc,'N') = 'N' THEN 'false' ELSE 'true' END AS tieneCuentaCorreo,
+	   			e.cc_usuario AS usuarioRed
+		FROM rys_mapeo_puesto mp, rys_empleado e
+		WHERE mp.cc_puesto = e.cc_puesto AND e.cc_nomina = #{numeroEmpleado}
+		AND e.sc_empresa =  #{empresa}  
+	</select>-->
+	
+
+	<select id="obtenerRutaImagenFinsol" parameterType="ImagenDTO" resultType="ImagenDTO">
+		SELECT cg_nombre_img AS nombreImagen,
+   			ISNULL(CONVERT(VARCHAR(10),dt_llegada_foto,103),'') + ' ' + ISNULL(CONVERT(VARCHAR(10),dt_llegada_foto,108),'') AS estatus,   			
+   			ISNULL(CONVERT(VARCHAR(10),dt_alta,103),'') + ' ' + ISNULL(CONVERT(VARCHAR(10),dt_alta,108),'') AS fechaAlta,   			
+   			cg_referencia AS referencia,
+   			cc_servicio AS tipoImagen,
+   			CASE 
+   			WHEN 
+   			 dt_llegada_foto = NULL 
+   			 THEN
+   				 datediff(minute, dt_alta,getdate())
+   			 ELSE
+   				 datediff(minute, dt_alta,dt_llegada_foto) 
+   			 END  AS diferencia
+		FROM digint_datos where cc_servicio = #{tipoImagen} 
+		AND cg_observacion = #{referencia}
+	</select>	
+
+</mapper>	

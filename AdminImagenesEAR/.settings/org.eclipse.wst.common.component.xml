@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="AdminImagenesEAR-1.0">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/ear-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/application" tag="defaultRootSource"/>
+        <dependent-module archiveName="AdminImagenes-1.0.war" deploy-path="/" handle="module:/resource/AdminImagenes/AdminImagenes">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="AdminImagenesControlNegocio-1.0.jar" deploy-path="/lib" handle="module:/resource/AdminImagenesControlNegocio/AdminImagenesControlNegocio">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="AdminImagenesDataServices-1.0.jar" deploy-path="/lib" handle="module:/resource/AdminImagenesDataServices/AdminImagenesDataServices">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="mybatis-3.0.5.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/mybatis/mybatis/3.0.5/mybatis-3.0.5.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jconn-3.0.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/com/sybase/jconn/3.0/jconn-3.0.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="AdminImagenesDTO-1.0.jar" deploy-path="/lib" handle="module:/resource/AdminImagenesDTO/AdminImagenesDTO">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jackson-core-asl-1.9.13.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="sca-api-1.1.1.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/codehaus/fabric3/spec/sca-api/1.1.1/sca-api-1.1.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="xstream-1.4.3.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/com/thoughtworks/xstream/xstream/1.4.3/xstream-1.4.3.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="xmlpull-1.1.3.1.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="xpp3_min-1.1.4c.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jackson-mapper-asl-1.9.13.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="log4j-1.2.14.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/log4j/log4j/1.2.14/log4j-1.2.14.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="junit-4.11.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/junit/junit/4.11/junit-4.11.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hamcrest-core-1.3.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>
